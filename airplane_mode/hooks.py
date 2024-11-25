@@ -241,4 +241,16 @@ app_license = "mit"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
+# scheduler_events = {
+#     "daily": [
+#         "frappe.email.queue.flush"
+#     ]
+# }
+# website_route_rules = [
+#     {"from_route": "/flights/<flight>", "to_route": "airplane_flight"}
+# ]
+
+# website_route_rules = [
+#     {"from_route": "/shops/<docname>", "to_route": "airport_shops"}
+# ]
 
