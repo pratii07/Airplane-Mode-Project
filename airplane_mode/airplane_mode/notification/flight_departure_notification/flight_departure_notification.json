@@ -1,0 +1,30 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "condition": "doc.status==\"Schedule\"\n",
+ "creation": "2024-11-20 22:11:22.296528",
+ "date_changed": "creation",
+ "days_in_advance": 1,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Airplane Flight",
+ "enabled": 1,
+ "event": "Days Before",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<p>The flight {{ doc.name }} is scheduled to depart in 24 hours.</p>\n<p>Departure Details:</p>\n<ul>\n  <li>Airplane: {{ doc.airplane }}</li>\n  <li>Source Airport: {{ doc.source_airport_code }}</li>\n  <li>Destination Airport: {{ doc.destination_airport_code }}</li>\n  <li>Departure Date: {{ doc.date_of_departure }}</li>\n  <li>Departure Time: {{ doc.time_of_departure }}</li>\n</ul>\n",
+ "message_type": "HTML",
+ "modified": "2024-11-20 22:14:26.037805",
+ "modified_by": "Administrator",
+ "module": "airplane_mode",
+ "name": "Flight Departure Notification",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_role": "System Manager"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "Departs in 24 hours!"
+}

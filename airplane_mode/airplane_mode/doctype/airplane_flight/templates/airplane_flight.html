@@ -1,0 +1,43 @@
+{% extends "templates/web.html" %}
+
+{% block title %}
+  Airplane Flight Details
+{% endblock %}
+
+{% block page_content %}
+  <div class="container">
+    <h1>{{ title or "Airplane Flight Details" }}</h1>
+    <h2>Flight Details</h2><br>
+
+    <ul>
+      <li>Airline: {{ doc.airplane }}</li>
+      <li>{{ doc.source_airport_code }} → {{ doc.destination_airport_code }}</li>
+      <li>{{ doc.date_of_departure }} | {{ doc.time_of_departure }}</li>
+      <li>
+        Duration: 
+        {% set hours = (doc.duration // 3600) | int %}
+        {% set minutes = ((doc.duration % 3600) // 60) | int %}
+        {{ hours }}h {% if minutes > 0 %}{{ minutes }}m{% endif %}
+      </li>
+    </ul><br>
+
+    <div class="book-flight-container">
+        <button class="book-flight-button">Book Flight</button>
+    </div>
+  </div>
+
+  <style>
+    .book-flight-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    li{
+      font-size:19px;
+      padding:4px;
+    }
+  </style>
+{% endblock %}

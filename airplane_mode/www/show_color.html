@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% set shops = frappe.get_all("Airport Shops", filters={"status": "Available"}, fields=["shop_name", "shop_number","location", "status", "route"]) %}
+    {% block page_content %}
+    <div class="container">
+        <h1>{{ _("Shop Portal") }}</h1>
+        <div class="form-container">
+            <form method="GET" action="" class="d-flex align-items-center">
+                <!-- <label for="airport">Airport:</label> -->
+                <!-- <select id="airport" name="airport" onchange="this.form.submit()"> -->
+                    <!-- <option value="">All</option> -->
+                    <!-- {% for airport in airports %} -->
+                    <!-- <option value="{{ airport.name }}" {% if selected_airport == airport.name %}selected{% endif %}>{{ airport.name }}</option> -->
+                    <!-- {% endfor %} -->
+                </select>
+            </form>
+        </div>
+
+        <div class="mt-5 row">
+            {% for shop in shops %}
+            <div class="card mr-3 p-3" style="width: 15em;">
+                <h2>{{ shop.shop_name }}</h2>
+                <p><strong>Shop No:</strong> {{ shop.shop_number }}</p>
+                <p><strong>Area:</strong> {{ shop.location }}</p>
+                <p><strong>Owner:</strong> {{ shop.shop_name }}</p>
+                <p>{{ shop.route }}</p>
+                <a href="/{{ shop.route |e }}" class="btn btn-primary">Details</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

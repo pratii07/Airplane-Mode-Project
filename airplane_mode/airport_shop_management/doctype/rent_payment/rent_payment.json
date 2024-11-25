@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{shop_name}-{###}",
+ "creation": "2024-11-25 17:57:44.247446",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_a3jg",
+  "shop_name",
+  "rent_amount",
+  "amended_from",
+  "column_break_jprx",
+  "due_date",
+  "payment_mode",
+  "contract_date_section",
+  "starting_date",
+  "column_break_zasc",
+  "ending_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_a3jg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rent Payment",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "shop_name.rent_amount",
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rent Amount"
+  },
+  {
+   "description": "(payment date)",
+   "fetch_from": "shop_name.date_of_expiry",
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "payment_mode",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Payment Mode",
+   "options": "Cash\nDebit cards\nPayPal\nGoogle Pay\nBank transfers"
+  },
+  {
+   "fieldname": "contract_date_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Date"
+  },
+  {
+   "fieldname": "starting_date",
+   "fieldtype": "Date",
+   "label": "Starting Date"
+  },
+  {
+   "fieldname": "ending_date",
+   "fieldtype": "Date",
+   "label": "Ending Date"
+  },
+  {
+   "fieldname": "column_break_zasc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jprx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shop Name",
+   "options": "Airport Shops"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-11-25 18:28:24.758223",
+ "modified_by": "Administrator",
+ "module": "airport shop management",
+ "name": "Rent Payment",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

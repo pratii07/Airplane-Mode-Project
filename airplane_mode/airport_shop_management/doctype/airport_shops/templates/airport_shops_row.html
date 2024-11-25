@@ -1,0 +1,23 @@
+<div class="shop-box">
+    <p><strong>{{ doc.shop_name |e }}</strong></p>
+	<p>{{ doc.shop_number }} → {{ doc.location }}</p>
+    <a href="{{ doc.route |e }}" class="details-link">View Shop</a>
+</div>
+<style>
+	
+	.shop-box{
+		background-color : white;
+		padding :10px;
+		margin-bottom : 13px;
+		border: 2px solid #ccc; 
+		border-radius: 10px;
+		box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); 
+        font-family: Arial, sans-serif;
+
+	}
+	.details-link{
+		color : #3b87f7;
+		font-weight: bold;
+	}
+</style>
+<!-- this is a sample default list template -->

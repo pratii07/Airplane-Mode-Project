@@ -1,0 +1,154 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{shop_name}-{shop_number}",
+ "creation": "2024-11-21 11:00:30.752024",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "shop_details_column",
+  "shop_name",
+  "shop_number",
+  "route",
+  "is_published",
+  "column_break_oiix",
+  "location",
+  "status",
+  "airport",
+  "tenant_details_section",
+  "tenant_name",
+  "email",
+  "column_break_puzr",
+  "contact_number",
+  "contract_details_section",
+  "rent_amount",
+  "column_break_ebms",
+  "date_of_expiry"
+ ],
+ "fields": [
+  {
+   "fieldname": "shop_details_column",
+   "fieldtype": "Column Break",
+   "label": "Shop Details"
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Name"
+  },
+  {
+   "fieldname": "shop_number",
+   "fieldtype": "Int",
+   "label": "Shop Number"
+  },
+  {
+   "fetch_from": "airport.city",
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "tenant_details_section",
+   "fieldtype": "Section Break",
+   "label": "Tenant Details"
+  },
+  {
+   "fieldname": "tenant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tenant Name"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "column_break_puzr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Phone",
+   "label": "Contact Number"
+  },
+  {
+   "fieldname": "contract_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Details"
+  },
+  {
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rent Amount"
+  },
+  {
+   "fieldname": "date_of_expiry",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date Of Expiry"
+  },
+  {
+   "fieldname": "column_break_ebms",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_oiix",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "available",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "available\noccupied"
+  },
+  {
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "label": "Airport",
+   "options": "Airport"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "is_published"
+  }
+ ],
+ "has_web_view": 1,
+ "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
+ "links": [],
+ "modified": "2024-11-25 13:41:54.236921",
+ "modified_by": "Administrator",
+ "module": "airport shop management",
+ "name": "Airport Shops",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "shops",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

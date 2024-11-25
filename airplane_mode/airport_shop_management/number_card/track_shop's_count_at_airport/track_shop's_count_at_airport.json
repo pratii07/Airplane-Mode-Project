@@ -1,0 +1,22 @@
+{
+ "creation": "2024-11-21 19:21:10.610115",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "filters_json": "{}",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "label": "Track shop's-count At Airport",
+ "modified": "2024-11-21 19:21:10.713916",
+ "modified_by": "Administrator",
+ "module": "airport shop management",
+ "name": "Track shop's-count At Airport",
+ "owner": "Administrator",
+ "report_field": "shop_count",
+ "report_function": "Sum",
+ "report_name": "Track shops at Airport",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Report"
+}

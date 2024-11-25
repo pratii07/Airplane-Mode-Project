@@ -1,0 +1,71 @@
+{% extends "templates/web.html" %}
+
+{% block title %}
+  Shop's Details
+{% endblock %}
+
+{% block page_content %}
+  <div class="container">
+    <h1 class="title">{{ title or "Shop's Details" }}</h1>
+
+    <ul class="shop-details">
+      <li><strong>Shop:</strong> {{ doc.shop_name }}</li>
+      <li><strong>Number & Location:</strong> {{ doc.shop_number }} → {{ doc.location }}</li>
+      <li><strong>Airport:</strong> {{ doc.airport }}</li>
+      <li><strong>Status:</strong> {{ doc.status }}</li>
+      <li><strong>Tenant Name:</strong> {{ doc.tenant_name }}</li>
+      <li><strong>Email:</strong> {{ doc.email }}</li>
+      <li><strong>Contact Number:</strong> {{ doc.contact_number }}</li>
+      <li><strong>Rent Amount:</strong> ₹{{ doc.rent_amount }}</li>
+      <li><strong>Date of Expiry:</strong> {{ doc.date_of_expiry }}</li>
+    </ul>
+  </div>
+{% endblock %}
+
+{% block style %}
+  <style>
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .title {
+      font-size: 28px;
+      color: #333;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 22px;
+      color: #555;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .shop-details {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .shop-details li {
+      font-size: 18px;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .shop-details li:last-child {
+      border-bottom: none;
+    }
+
+    .shop-details li strong {
+      color: #007bff;
+    }
+  </style>
+{% endblock %}
