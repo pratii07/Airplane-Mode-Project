@@ -10,7 +10,8 @@
   "model",
   "column_break_odyl",
   "capacity",
-  "initial_audit_completed"
+  "initial_audit_completed",
+  "gate_number"
  ],
  "fields": [
   {
@@ -45,11 +46,17 @@
    "fieldname": "initial_audit_completed",
    "fieldtype": "Check",
    "label": "Initial Audit Completed"
+  },
+  {
+   "fieldname": "gate_number",
+   "fieldtype": "Select",
+   "label": "Gate Number",
+   "options": "A11\nA12\nA13\nA14\nA15\nB11\nB12\nB13\nB14\nB15\nC11\nC12\nC13\nC14\nC15"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-21 10:28:35.149121",
+ "modified": "2024-11-28 11:38:25.060123",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane",

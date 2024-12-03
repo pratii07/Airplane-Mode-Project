@@ -1,8 +1,13 @@
-<div class="shop-box">
-    <p><strong>{{ doc.shop_name |e }}</strong></p>
-	<p>{{ doc.shop_number }} → {{ doc.location }}</p>
-    <a href="{{ doc.route |e }}" class="details-link">View Shop</a>
-</div>
+{% if status == "available" %}
+
+    <div class="shop-box">
+        <p><strong>{{ doc.shop_name |e }}</strong></p>
+        <p>{{ doc.shop_number }} → {{ doc.location }}</p>
+        <a href="{{ doc.route |e }}" class="details-link">View Shop</a>
+    </div>
+
+{% endif %}
+
 <style>
 	
 	.shop-box{

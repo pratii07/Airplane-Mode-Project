@@ -9,7 +9,7 @@
   "passenger",
   "status",
   "source_airport_code",
-  "gate_number",
+  "gate_no",
   "column_break_guym",
   "flight",
   "seat",
@@ -146,19 +146,20 @@
   {
    "fieldname": "seat",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Seat"
+   "label": "Seat",
+   "read_only": 1
   },
   {
-   "fieldname": "gate_number",
+   "fetch_from": "flight.gate_number",
+   "fieldname": "gate_no",
    "fieldtype": "Data",
-   "label": "Gate Number"
+   "label": "Gate No"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-21 10:58:20.191824",
+ "modified": "2024-11-28 11:58:39.802555",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Ticket",
@@ -209,6 +210,18 @@
    "read": 1,
    "report": 1,
    "role": "Fleet Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Airport Authority Personnel",
    "share": 1,
    "write": 1
   }

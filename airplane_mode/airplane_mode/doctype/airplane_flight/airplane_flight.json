@@ -9,6 +9,7 @@
  "field_order": [
   "airplane",
   "amended_from",
+  "gate_number",
   "column_break_ljgb",
   "status",
   "route",
@@ -138,6 +139,12 @@
    "fieldtype": "Table",
    "label": "Crew Member",
    "options": "Crew Member"
+  },
+  {
+   "fetch_from": "airplane.gate_number",
+   "fieldname": "gate_number",
+   "fieldtype": "Data",
+   "label": "Gate Number"
   }
  ],
  "has_web_view": 1,
@@ -150,7 +157,7 @@
    "link_fieldname": "Flight"
   }
  ],
- "modified": "2024-11-21 10:52:58.682312",
+ "modified": "2024-11-28 11:49:58.841997",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Flight",

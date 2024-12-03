@@ -148,10 +148,12 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"airplane_mode.tasks.all"
-# 	],
+scheduler_events = {
+	"cron":{ 
+     	"07 23 * * *":[
+			"airplane_mode.task.log_cron_message"
+	]}
+}
 # 	"daily": [
 # 		"airplane_mode.tasks.daily"
 # 	],
